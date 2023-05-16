@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Enfeite.css">
-    <title>Document</title>
+    <link rel="icon" href="../imageorkut.png"> <!--Colocar icone que não entrou no VSCode pela pasta-->
+    <title>Orkut</title>
 </head>
 <header>
     <nav>
         <a href="https://orkut.com/"> <img src="./orkut.PNG" alt="" title="Orkut20" class="botao"> </a>
         <div class="listaLinks">
-            <ul>
-                <li> Início</li>
-                <li> Perfil</li>
-                <li> Página de Recados</li>
-                <li> Amigos</li>
-                <li> Comunidades</li>
+            <ul class="homes"> <!--Colocar no / o "link das páginas"-->
+                <li><a href="/"> Início</a></li>
+                <li><a href="/"> Perfil</a></li>
+                <li><a href="/"> Página de Recados</a></li>
+                <li><a href="/"> Amigos</a></li>
+                <li><a href="/"> Comunidades</a></li>
             </ul>
         </div>
         <div class="listaBotoes">
@@ -28,19 +29,33 @@
     </nav>
 </header>
 <div class="container">
-    <aside id="esquerda">Coluna esquerda</aside>
+    <aside id="esquerda">
+        <div class="foto-perfil">
+    <img id="imagem-perfil" src="perfil.jpg" alt="Foto de Perfil">
+    <div class="opcoes">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="photo" accept="image/*">
+            <input type="submit" value="Enviar">
+        </form>
+      <button id="btn-trocar-imagem" class="trocar">Trocar Foto</button>
+      <button id="btn-remover-imagem" class="remove">Remover Foto</button>
+      <button class="seguir">Seguir</button>
+      <button class="config">Configurações</button>
+    </div>
+  </div>
+    </aside>
     <main>Meio</main>
     <aside id="direita">
-        <div class="gallery">
-            <img src="./brabo.jpg" alt="">
-            <img src="./chiquinha.jpg" alt="">
-            <img src="./maconheiro.jpg" alt="">
-            <img src="./influencer.jpg" alt="">
-            <img src="./tiktoker.jpg" alt="">
-            <img src="./blogueira.jpg" alt="">
-            <img src="./arrogante.webp" alt="">
-            <img src="./simpatico.webp" alt="">
-            <img src="./friends.jpg" alt="">
+        <div class="bloco-imagens">
+            <img src="./brabo.jpg" alt="imagem 1">
+            <img src="./chiquinha.jpg" alt="imagem 2">
+            <img src="./maconheiro.jpg" alt="imagem 3">
+            <img src="./influencer.jpg" alt="imagem 4">
+            <img src="./tiktoker.jpg" alt="imagem 5">
+            <img src="./blogueira.jpg" alt="imagem 6">
+            <img src="./arrogante.webp" alt="imagem 7">
+            <img src="./simpatico.webp" alt="imagem 8">
+            <img src="./friends.jpg" alt="imagem 9">
         </div>
     </aside>
 </div>
